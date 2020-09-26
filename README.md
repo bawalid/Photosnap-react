@@ -1,8 +1,24 @@
+# Frontend Mentor - Photosnap Website
+
+![Design preview for the Photosnap Website coding challenge](./preview.jpg)
+
+## Welcome! 👋
+
+Thanks for purchasing this premium Frontend Mentor coding challenge.
+
+[Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow. These premium challenges are perfect portfolio pieces, so please do feel free to use what you build in your portfolio to show others.
+
+**To do this challenge, you need a solid understanding of HTML and CSS and a basic understanding of JavaScript.**
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Install all dependencies needed for this project.
 
 ### `npm start`
 
