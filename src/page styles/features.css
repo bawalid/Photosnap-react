@@ -1,0 +1,52 @@
+.features_page .rainbow {
+  height: 144px;
+}
+
+@media screen and (max-width: 584px) {
+  .features_page .rainbow {
+    height: 6px;
+  }
+}
+
+.features_page_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 104px;
+  padding: 120px 165px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 950px) {
+  .features_page_container {
+    padding: 112px 38px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    -webkit-column-gap: 11px;
+            column-gap: 11px;
+    row-gap: 72px;
+  }
+}
+
+@media screen and (max-width: 584px) {
+  .features_page_container {
+    padding: 64px 33px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[6];
+        grid-template-rows: repeat(6, 1fr);
+    -webkit-column-gap: 0;
+            column-gap: 0;
+    row-gap: 55px;
+  }
+}
+/*# sourceMappingURL=features.css.map */

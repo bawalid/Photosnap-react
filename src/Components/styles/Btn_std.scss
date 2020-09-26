@@ -1,0 +1,25 @@
+@import "../../page\ styles/_color_theme";
+
+.btn_std {
+  padding: 13px 24px;
+  text-transform: uppercase;
+  height: fit-content;
+  cursor: pointer;
+  transition: background-color 350ms;
+}
+.btn_std.dark {
+  background-color: black;
+  color: white;
+  &:hover {
+    background-color: $Light_Grey;
+    color: black;
+  }
+}
+.btn_std.light {
+  background-color: white;
+  color: black;
+  &:hover {
+    background-color: $Light_Grey;
+    color: black;
+  }
+}

@@ -1,0 +1,103 @@
+@import "./screenSize";
+@import "./color_theme";
+
+.pricing_page {
+  .rainbow {
+    height: 144px;
+    @include screen(small) {
+      height: 6px;
+    }
+  }
+}
+
+.price_selection {
+  padding: 120px 165px 161px;
+  display: grid;
+  justify-items: center;
+  row-gap: 48px;
+  @include screen(med) {
+    padding: 112px 39px;
+    row-gap: 40px;
+  }
+  .switching {
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 700;
+    .MuiGrid-item {
+      transition: 500ms opacity;
+    }
+  }
+}
+.price_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  column-gap: 30px;
+  width: 100%;
+  @include screen(med) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 24px;
+  }
+}
+.price_table_container {
+  margin-top: 160px;
+  width: 100%;
+  @include screen(med) {
+    margin-top: 112px;
+  }
+  @include screen(small) {
+    margin-top: 24px;
+  }
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 63px;
+  }
+  .price_table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 65%;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.166em;
+    font-weight: 700;
+    @include screen(med) {
+      width: 100%;
+    }
+    .table_header {
+      th {
+        border-bottom: 1px solid black;
+        padding-bottom: 23px;
+        @include screen(small) {
+          width: 100%;
+        }
+      }
+    }
+    .table_body {
+      border-bottom: 1px solid $Light_Grey;
+      td {
+        padding: 23px 0;
+      }
+      .table_package_title {
+        th {
+          padding: 20px 0 17px;
+        }
+      }
+      .table_package_name {
+        td {
+          padding: 17px 0 10px;
+          opacity: 0.5;
+          width: fit-content;
+        }
+      }
+      .table_package_check {
+        td {
+          padding: 0 0 24px;
+        }
+      }
+    }
+  }
+}

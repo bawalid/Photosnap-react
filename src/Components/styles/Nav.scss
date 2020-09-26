@@ -1,0 +1,106 @@
+@import "../../page\ styles/_color_theme";
+@import "../../page\ styles/_screenSize";
+.navbar_container {
+  z-index: 11;
+  position: relative;
+  padding: 16px 165px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  @include screen(med) {
+    padding: 16px 39px;
+  }
+  @include screen(custom, 630) {
+    padding: 16px;
+  }
+  @include screen(small) {
+    padding: 28px 24px;
+    .navbar_btn {
+      display: none;
+    }
+  }
+}
+
+.navbar_items {
+  width: 267px;
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    li {
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 700;
+      letter-spacing: 0.166em;
+      cursor: pointer;
+      transition: color 350ms;
+      &:hover {
+        color: $Light_Grey;
+      }
+    }
+  }
+  @include screen(custom, 678) {
+    width: 220px;
+  }
+  @include screen(small) {
+    display: none;
+  }
+}
+
+.hamburger_menu {
+  display: none;
+  @include screen(small) {
+    display: inline;
+  }
+}
+
+.mobile_menu {
+  z-index: 10;
+  position: absolute;
+  top: -200px;
+  left: 0;
+  background-color: white;
+  width: 100vw;
+  padding: 32px;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    li {
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 700;
+      letter-spacing: 0.166em;
+    }
+  }
+  hr {
+    border-color: rgba($color: #000000, $alpha: 0.25);
+    margin: 20px 0;
+  }
+}
+
+.background_overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  z-index: 1;
+  transition: opacity 350ms;
+}

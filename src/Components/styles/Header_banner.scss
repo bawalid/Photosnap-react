@@ -1,0 +1,124 @@
+@import "../../page\ styles/_screenSize";
+
+.banner {
+  display: grid;
+  height: 600px;
+  overflow: hidden;
+  .banner_img,
+  .banner_content {
+    height: 600px;
+  }
+  @include screen(small) {
+    display: contents;
+    height: fit-content;
+    .banner_content {
+      height: fit-content;
+    }
+    .banner_img {
+      height: 271px;
+    }
+  }
+}
+
+.banner.main {
+  height: 650px;
+  .banner_img,
+  .banner_content {
+    height: 650px;
+  }
+  @include screen(small) {
+    display: contents;
+    height: fit-content;
+    .banner_content {
+      height: fit-content;
+    }
+    .banner_img {
+      height: 294px;
+    }
+  }
+}
+
+.banner.features_banner {
+  height: 490px;
+  .banner_img,
+  .banner_content {
+    height: 490px;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  @include screen(small) {
+    display: contents;
+    height: fit-content;
+    .banner_content {
+      height: fit-content;
+    }
+    .banner_img {
+      height: 294px;
+    }
+  }
+}
+
+.banner.left {
+  grid-template-areas: "contents images";
+  grid-template-columns: 42.5% 57.5%;
+  @include screen(med) {
+    grid-template-columns: 64.5% 35.5%;
+  }
+}
+
+.banner.right {
+  grid-template-areas: "images contents";
+  grid-template-columns: 57.5% 42.5%;
+  @include screen(med) {
+    grid-template-columns: 35.5% 64.5%;
+  }
+}
+
+.banner_img {
+  grid-area: images;
+  width: 100%;
+  object-fit: cover;
+  @include screen(small) {
+    height: 100%;
+    object-position: top;
+  }
+}
+
+.banner_content {
+  grid-area: contents;
+  display: grid;
+  align-items: center;
+  padding: 174px 111px;
+  z-index: 2;
+  h1 {
+    text-transform: uppercase;
+  }
+  p {
+    opacity: 0.6;
+    margin-top: 18px;
+    margin-bottom: 45px;
+  }
+  @include screen(med) {
+    padding: 174px 54px;
+  }
+
+  @include screen(small) {
+    display: block;
+    padding: 73px 28px;
+  }
+}
+
+.banner.dark {
+  .banner_content {
+    background-color: black;
+    color: white;
+  }
+}
+
+.banner.light {
+  .banner_content {
+    background-color: white;
+    color: black;
+  }
+}

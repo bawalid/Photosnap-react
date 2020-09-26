@@ -1,0 +1,46 @@
+h1, h2 {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.104em;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 584px) {
+  h1, h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.166em;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 584px) {
+  h5 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+p {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+}
+/*# sourceMappingURL=index.css.map */

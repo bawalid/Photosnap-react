@@ -1,0 +1,111 @@
+@import "../../page\ styles/screenSize";
+
+.footer {
+  padding: 63px 168px;
+  background-color: black;
+  color: white;
+  display: grid;
+  row-gap: 85px;
+  grid-template-areas: "logo links arrow" "social links copyright";
+  @include screen(med) {
+    padding: 63px 40px;
+    row-gap: 0;
+    grid-template-areas: "logo arrow" "links arrow" "social copyright";
+  }
+  @include screen(small) {
+    grid-template-areas: "logo" "social" "links" "arrow" "copyright";
+    text-align: center;
+    justify-content: center;
+    .footer_logo {
+      margin-bottom: 32px;
+    }
+  }
+  .footer_logo {
+    grid-area: logo;
+    path:nth-child(1) {
+      fill: white;
+    }
+  }
+  .social {
+    grid-area: social;
+    @include screen(small) {
+      display: flex;
+      justify-content: space-between;
+      svg {
+        margin: 0;
+      }
+    }
+    svg {
+      margin-right: 13px;
+      cursor: pointer;
+    }
+    #facebook-gradient,
+    #youtube-gradient,
+    #twitter-gradient,
+    #pinterest-gradient,
+    #instagram-gradient {
+      opacity: 0;
+      display: inline-block;
+      -webkit-transition: opacity 0.3s ease;
+      -moz-transition: opacity 0.3s ease;
+      -o-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease;
+    }
+    #facebook-gradient:hover,
+    #youtube-gradient:hover,
+    #twitter-gradient:hover,
+    #pinterest-gradient:hover,
+    #instagram-gradient:hover {
+      opacity: 1;
+    }
+  }
+  .footer_links {
+    grid-area: links;
+    text-transform: uppercase;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include screen(med) {
+      flex-direction: row;
+      margin: 29px 0 75px;
+    }
+    @include screen(small) {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      row-gap: 19px;
+      justify-content: center;
+    }
+    a {
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.166em;
+      font-weight: 700;
+      text-decoration: none;
+      color: white;
+      transition: 350ms opacity;
+      &:hover {
+        opacity: 0.3;
+      }
+    }
+  }
+  .btn_arrow {
+    grid-area: arrow;
+    justify-self: flex-end;
+    @include screen(med) {
+      align-self: flex-start;
+    }
+    @include screen(small) {
+      justify-self: center;
+      margin-bottom: 36px;
+    }
+  }
+  span {
+    grid-area: copyright;
+    justify-self: flex-end;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    opacity: 0.5;
+  }
+}

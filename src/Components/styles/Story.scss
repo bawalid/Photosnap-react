@@ -1,0 +1,74 @@
+@import "../../page\ styles/screenSize";
+@import "../../page\ styles/color_theme";
+
+.story {
+  position: relative;
+  height: 500px;
+  flex: 1 1 25%;
+  z-index: 5;
+  @include screen(med) {
+    flex: 1 1 50%;
+  }
+  @include screen(small) {
+    height: 375px;
+    flex: 1 1 100%;
+  }
+  transition: 350ms margin;
+}
+.story:hover {
+  margin-top: -24px;
+  &::after {
+    content: "";
+    height: 6px;
+    width: 100%;
+    background: $Main_Accent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.story_back {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story_gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 64%);
+}
+
+.story_content {
+  position: absolute;
+  color: white;
+  top: 340px;
+  width: 100%;
+  padding: 0 40px;
+  @include screen(small) {
+    top: 219px;
+  }
+  .story_small {
+    font-size: 13px;
+    line-height: 17px;
+  }
+  hr {
+    margin: 16px 0 20px;
+    opacity: 0.25;
+  }
+  .stroy_arrow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-transform: uppercase;
+    svg path {
+      stroke: white;
+    }
+  }
+}

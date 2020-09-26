@@ -1,0 +1,20 @@
+.rainbow {
+  content: "";
+  width: 6px;
+  height: 304px;
+  background: linear-gradient(45deg, #ffc593 0%, #bc7198 50%, #5a77ff 100%);
+  position: absolute;
+  top: 245px;
+  left: 0;
+  z-index: 50;
+}
+
+@media screen and (max-width: 584px) {
+  .rainbow {
+    width: 128px;
+    height: 6px;
+    top: 370px;
+    left: 33px;
+  }
+}
+/*# sourceMappingURL=Rainbow.css.map */

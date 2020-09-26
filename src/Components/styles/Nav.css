@@ -1,0 +1,145 @@
+.navbar_container {
+  z-index: 11;
+  position: relative;
+  padding: 16px 165px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+@media screen and (max-width: 950px) {
+  .navbar_container {
+    padding: 16px 39px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .navbar_container {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 584px) {
+  .navbar_container {
+    padding: 28px 24px;
+  }
+  .navbar_container .navbar_btn {
+    display: none;
+  }
+}
+
+.navbar_items {
+  width: 267px;
+}
+
+.navbar_items ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar_items ul a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar_items ul li {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.166em;
+  cursor: pointer;
+  -webkit-transition: color 350ms;
+  transition: color 350ms;
+}
+
+.navbar_items ul li:hover {
+  color: #DFDFDF;
+}
+
+@media screen and (max-width: 678px) {
+  .navbar_items {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 584px) {
+  .navbar_items {
+    display: none;
+  }
+}
+
+.hamburger_menu {
+  display: none;
+}
+
+@media screen and (max-width: 584px) {
+  .hamburger_menu {
+    display: inline;
+  }
+}
+
+.mobile_menu {
+  z-index: 10;
+  position: absolute;
+  top: -200px;
+  left: 0;
+  background-color: white;
+  width: 100vw;
+  padding: 32px;
+  text-align: center;
+}
+
+.mobile_menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.mobile_menu ul {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.mobile_menu ul li {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.166em;
+}
+
+.mobile_menu hr {
+  border-color: rgba(0, 0, 0, 0.25);
+  margin: 20px 0;
+}
+
+.background_overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+}
+/*# sourceMappingURL=Nav.css.map */

@@ -1,0 +1,29 @@
+@import "./screenSize";
+
+.stories_preview {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.features {
+  display: flex;
+  padding: 120px 165px;
+  align-items: center;
+  @include screen(med) {
+    padding: 120px 155px;
+    flex-direction: column;
+  }
+  @include screen(small) {
+    padding: 64px 33px;
+  }
+  .feature:nth-child(2) {
+    margin: 0 30px;
+    @include screen(med) {
+      margin: 80px 0;
+    }
+    @include screen(small) {
+      margin: 56px 0;
+    }
+  }
+}

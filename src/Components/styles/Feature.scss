@@ -1,0 +1,23 @@
+@import "../../page\ styles/screenSize";
+
+.feature {
+  height: 236px;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  img {
+    justify-self: center;
+  }
+  .feature_content {
+    align-self: bottom;
+    p {
+      margin-top: 16px;
+    }
+  }
+  @include screen(med) {
+    height: 193px;
+  }
+  @include screen(small) {
+    height: 218px;
+  }
+}

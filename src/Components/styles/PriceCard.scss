@@ -1,0 +1,85 @@
+@import "../../page\ styles/screenSize";
+@import "../../page\ styles/color_theme";
+
+.price_card {
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 48px 40px;
+  height: 407px;
+  width: 100%;
+  @include screen(med) {
+    padding: 40px;
+    height: 270px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .package_name {
+      text-align: left;
+    }
+  }
+  @include screen(small) {
+    display: inline;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 48px 21px;
+    height: 407px;
+    width: 100%;
+    .package_name {
+      text-align: center;
+    }
+  }
+  h3 {
+    margin-bottom: 19px;
+  }
+}
+
+.package_price {
+  margin: 40px 0;
+  @include screen(med) {
+    margin: 0;
+    align-self: flex-start;
+    text-align: right;
+  }
+  @include screen(small) {
+    margin: 40px 0;
+    align-self: center;
+    text-align: center;
+  }
+}
+
+.price_card.pro {
+  position: relative;
+  background-color: black;
+  color: white;
+  padding: 80px 40px;
+  height: 470px;
+  @include screen(med) {
+    padding: 40px;
+    height: 270px;
+  }
+  @include screen(small) {
+    padding: 48px 21px;
+    height: 407px;
+    width: 100%;
+  }
+  .rainbow {
+    top: 0;
+    width: 100%;
+    height: 6px;
+    @include screen(med) {
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+    }
+    @include screen(small) {
+      top: 0;
+      width: 100%;
+      height: 6px;
+    }
+  }
+}
+
+.package_name > p,
+.package_price > p {
+  opacity: 0.6;
+}

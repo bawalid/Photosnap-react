@@ -1,0 +1,36 @@
+.feature {
+  height: 236px;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+}
+
+.feature img {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.feature .feature_content {
+  -ms-flex-item-align: bottom;
+      -ms-grid-row-align: bottom;
+      align-self: bottom;
+}
+
+.feature .feature_content p {
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 950px) {
+  .feature {
+    height: 193px;
+  }
+}
+
+@media screen and (max-width: 584px) {
+  .feature {
+    height: 218px;
+  }
+}
+/*# sourceMappingURL=Feature.css.map */

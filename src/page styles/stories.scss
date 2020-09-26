@@ -1,0 +1,63 @@
+@import "./screenSize";
+.stories_header_container {
+  position: relative;
+  height: 650px;
+  .stories_header {
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+  }
+  @include screen(small) {
+    height: 100%;
+    .stories_header {
+      height: 317px;
+    }
+  }
+}
+
+.stories_header_text {
+  position: absolute;
+  color: white;
+  width: 387px;
+  height: 407px;
+  top: 119px;
+  left: 112px;
+  @include screen(med) {
+    left: 39px;
+  }
+  @include screen(small) {
+    position: initial;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    padding: 48px 29px;
+  }
+  h5 {
+    margin-bottom: 25px;
+  }
+  h1 {
+    margin-bottom: 13px;
+  }
+  .stories_date_auth {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 9px;
+    margin-bottom: 27px;
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 400;
+  }
+  .stories_date {
+    opacity: 0.75;
+  }
+  .stories_text {
+    opacity: 0.6;
+    margin-bottom: 21px;
+  }
+}
+
+.stories {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}

@@ -1,0 +1,33 @@
+@import "./screenSize";
+
+.features_page {
+  .rainbow {
+    height: 144px;
+    @include screen(small) {
+      height: 6px;
+    }
+  }
+}
+.features_page_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 104px;
+  padding: 120px 165px;
+  align-items: center;
+  @include screen(med) {
+    padding: 112px 38px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 11px;
+    row-gap: 72px;
+  }
+  @include screen(small) {
+    padding: 64px 33px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    column-gap: 0;
+    row-gap: 55px;
+  }
+}

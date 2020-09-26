@@ -1,0 +1,58 @@
+.beta_invite {
+  position: relative;
+  padding: 66px 165px;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 400px auto;
+      grid-template-columns: 400px auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../../assets/shared/desktop/bg-beta.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 950px) {
+  .beta_invite {
+    background-image: url("../../assets/shared/tablet/bg-beta.jpg");
+    padding: 63px 40px;
+  }
+}
+
+@media screen and (max-width: 584px) {
+  .beta_invite {
+    background-image: url("../../assets/shared/mobile/bg-beta.jpg");
+    padding: 65px 33px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 19px;
+  }
+}
+
+.beta_invite h1 {
+  text-transform: uppercase;
+}
+
+.beta_invite .btn_arrow {
+  justify-self: flex-end;
+}
+
+@media screen and (max-width: 584px) {
+  .beta_invite .btn_arrow {
+    justify-self: flex-start;
+  }
+}
+
+.beta_invite .rainbow {
+  height: 100% !important;
+  top: 0;
+}
+
+@media screen and (max-width: 584px) {
+  .beta_invite .rainbow {
+    height: 6px !important;
+  }
+}
+/*# sourceMappingURL=BetaInvite.css.map */

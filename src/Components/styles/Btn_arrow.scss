@@ -1,0 +1,29 @@
+.btn_arrow {
+  display: flex;
+  cursor: pointer;
+  h5 {
+    text-transform: uppercase;
+  }
+  svg {
+    margin-left: 19px;
+  }
+  &:hover {
+    h5 {
+      text-decoration: underline;
+    }
+  }
+}
+
+.btn_arrow.dark {
+  color: black;
+  svg path {
+    stroke: black;
+  }
+}
+
+.btn_arrow.light {
+  color: white;
+  svg path {
+    stroke: white;
+  }
+}

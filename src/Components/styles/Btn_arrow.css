@@ -1,0 +1,35 @@
+.btn_arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.btn_arrow h5 {
+  text-transform: uppercase;
+}
+
+.btn_arrow svg {
+  margin-left: 19px;
+}
+
+.btn_arrow:hover h5 {
+  text-decoration: underline;
+}
+
+.btn_arrow.dark {
+  color: black;
+}
+
+.btn_arrow.dark svg path {
+  stroke: black;
+}
+
+.btn_arrow.light {
+  color: white;
+}
+
+.btn_arrow.light svg path {
+  stroke: white;
+}
+/*# sourceMappingURL=Btn_arrow.css.map */
